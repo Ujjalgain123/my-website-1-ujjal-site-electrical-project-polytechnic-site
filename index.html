@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polytechnic Electrical Engineering</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Arial', sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background: linear-gradient(135deg, #1e3c72, #2a5298); 
+            min-height: 100vh;
+        }
+        .hero { 
+            position: relative; 
+            height: 50vh; 
+            background: url('https://source.unsplash.com/1600x900/?polytechnic,electrical,engineering') center/cover; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            text-align: center; 
+            color: white; 
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .hero h1 { font-size: 3em; margin-bottom: 10px; }
+        .hero p { font-size: 1.5em; max-width: 800px; }
+        .tabs { 
+            display: flex; 
+            justify-content: center; 
+            flex-wrap: wrap; 
+            padding: 20px; 
+            background: rgba(255,255,255,0.1); 
+            backdrop-filter: blur(10px);
+        }
+        .tab-btn { 
+            background: #ff6b35; 
+            color: white; 
+            border: none; 
+            padding: 15px 30px; 
+            margin: 10px; 
+            font-size: 1.2em; 
+            font-weight: bold; 
+            border-radius: 50px; 
+            cursor: pointer; 
+            transition: all 0.3s; 
+            text-decoration: none; 
+            display: inline-block; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .tab-btn:hover { background: #e55a2b; transform: translateY(-3px); }
+        .tab-btn.active { background: #007bff; }
+        .section { 
+            display: none; 
+            max-width: 1200px; 
+            margin: 40px auto; 
+            padding: 40px; 
+            background: white; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3); 
+        }
+        .section.active { display: block; }
+        h2 { color: #1e3c72; margin-bottom: 20px; }
+        p { margin-bottom: 15px; }
+        br { display: block; margin: 10px 0; }
+        hr { border: none; height: 2px; background: #ff6b35; margin: 30px 0; }
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 20px 0; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        th, td { 
+            padding: 15px; 
+            text-align: left; 
+            border-bottom: 1px solid #ddd; 
+        }
+        th { background: #1e3c72; color: white; }
+        .note { 
+            background: #f8f9fa; 
+            padding: 20px; 
+            margin: 20px 0; 
+            border-left: 5px solid #ff6b35; 
+            border-radius: 5px;
+        }
+        .detail { margin-top: 20px; padding: 20px; background: #e9f4ff; border-radius: 10px; }
+        @media (max-width: 768px) { 
+            .tabs { flex-direction: column; align-items: center; } 
+            .hero h1 { font-size: 2em; } 
+            .section { margin: 20px; padding: 20px; } 
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section - 1st Page -->
+    <section id="home" class="hero">
+        <div>
+            <h1>Polytechnic Electrical Engineering</h1>
+            <p>Discover Diploma in Electrical Engineering (DEE) and more at our premier institute.</p>
+        </div>
+    </section>
+
+    <!-- Tab Buttons -->
+    <nav class="tabs">
+        <a href="#home" class="tab-btn active" onclick="showTab('home')">Home</a>
+        <a href="#about-me" class="tab-btn" onclick="showTab('about-me')">About Me</a>
+        <a href="#institution" class="tab-btn" onclick="showTab('institution')">About Institution</a>
+        <a href="#contact" class="tab-btn" onclick="showTab('contact')">Contact</a>
+    </nav>
+
+    <!-- About Me Section -->
+<section id="about-me" class="section">
+        <h2>About Myself</h2>
+        <p><strong>UJJAL GAIN</strong> - First Year Diploma in Electrical Engineering (DEE) Student at Sir Rajendra Nath Mukherjee Govt. Polytechnic.<br><br>
+           Passionate about electrical circuits, power distribution, and emerging technologies like renewable energy.</p><br>
+        <p>Currently gaining hands-on experience in wiring installations, motor controls, and basic electronics in college labs.<br>
+           Skilled in reading circuit diagrams, using multimeters, and safety protocols.</p><hr>
+        <p>Participated in projects like simple transformer models and home wiring simulations.<br><br>
+           Aspiring to become a proficient electrical technician, focusing on sustainable power solutions and industrial automation.<br><br>
+           Committed to continuous learning in electrical standards (IEC), CAD for schematics, and PLC programming.</p>
+    </section>
+
+    <!-- Institution Section -->
+    <section id="institution" class="section">
+        <h2>About Institution - Sir Rajendra Nath Mukherjee Govt. Polytechnic (Basirhat Govt. Polytechnic College)</h2>
+        <p>Premier government polytechnic offering quality diploma programs in engineering streams with modern labs and experienced faculty.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Serial No</th>
+                    <th>Stream Name</th>
+                    <th>Others</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><a href="#detail-dee">DEE</a></td>
+                    <td>3-year full-time Diploma in Electrical Engineering; covers wiring, machines, power systems, electronics; labs include transformers/motors/generators; eligibility: 10th pass with Science/Math.</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="#detail-dcst">DCST</a></td>
+                    <td>3-year Diploma in Computer Science Technology; programming (C/Python), networks, databases, web dev; computer labs with latest software/hardware; eligibility: 10th pass.</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><a href="#detail-dre">DRE</a></td>
+                    <td>3-year Diploma in Renewable Energy; solar/wind systems, energy storage, green tech; practical training on PV panels/inverters; aligns with govt. sustainability goals; eligibility: 10th pass.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="note">
+            <strong>DEE:</strong> Core electrical diploma covering wiring, motors, transformers. <a href="#detail-dee">read more</a>
+        </div>
+        <div class="note">
+            <strong>DCST:</strong> Diploma in computer science and tech, programming, networks. <a href="#detail-dcst">read more</a>
+        </div>
+        <div class="note">
+            <strong>DRE:</strong> Focus on solar, wind energy systems and green tech. <a href="#detail-dre">read more</a>
+        </div>
+
+        <!-- Large Discussions -->
+        <section id="detail-dee" class="detail">
+            <h3>DEE - Diploma in Electrical Engineering</h3>
+            <p>DEE is a comprehensive 3-year program equipping students with foundational and advanced knowledge in electrical systems. Curriculum includes basic electricity, electrical machines, power distribution, control systems, and safety protocols. Students engage in practical labs with transformers, motors, generators, and wiring simulations. Career prospects: Electrical technician, supervisor in power plants, maintenance engineer, or further studies in B.Tech. The program emphasizes hands-on projects like home wiring models and renewable integrations, preparing for industry demands in manufacturing and utilities.</p>
+        </section>
+
+        <section id="detail-dcst" class="detail">
+            <h3>DCST - Diploma in Computer Science Technology</h3>
+            <p>DCST offers 3-year diploma in computing, covering programming (C, Python), data structures, database management, web development, and networking. Practical training includes software development, hardware assembly, cybersecurity basics, and IoT projects. Labs feature modern PCs for coding and simulations. Graduates pursue roles as junior developers, network admins, IT support, or app developers. Integrates electrical aspects like embedded systems for interdisciplinary skills.</p>
+        </section>
+
+        <section id="detail-dre" class="detail">
+            <h3>DRE - Diploma in Renewable Energy</h3>
+            <p>DRE is a specialized 3-year diploma focusing on sustainable energy: solar PV systems, wind turbines, bioenergy, energy storage, and smart grids. Coursework includes electrical principles applied to renewables, installation techniques, maintenance, and policy awareness. Hands-on with solar panel setups, inverters, and efficiency testing. Careers: Renewable technician, site supervisor, energy auditor, or roles in green energy firms. Aligns with global shift to clean energy.</p>
+        </section>
+    </section>
+
+    <!-- Contact Section (placeholder) -->
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Email: student@polytechnic.edu | Phone: 123-456-7890</p>
+    </section>
+
+    <script>
+        function showTab(tabId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section, .hero');
+            sections.forEach(sec => sec.classList.remove('active'));
+            // Remove active from all tabs
+            const tabs = document.querySelectorAll('.tab-btn');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            // Show selected
+            document.getElementById(tabId).classList.add('active');
+            // Activate clicked tab
+            event.target.classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        // Home active by default
+        document.getElementById('home').classList.add('active');
+    </script>
+</body>
+</html>
